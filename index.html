@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola Mundo</title>
+    <title>Fx delta</title>
     <style>
         body {
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column; /* Coloca los elementos en una columna (uno debajo del otro) */
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -19,13 +20,31 @@
             color: #333;
             font-size: 3em;
             text-shadow: 2px 2px #aaa;
+            margin-bottom: 20px; /* Añade espacio debajo del título */
+        }
+
+        #boton {
+            border: 2px solid red;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button a {
+            text-decoration: none;
+            color: #000;
         }
     </style>
 </head>
 <body>
-    <h1>bienvenido ala página de fx delta</h1><br>
-    <div>
-            <button><a href="iniciofx.html">Inicio</a></button>
+    <h1>Bienvenido a la página FX Delta</h1>
+    <div id="boton">
+        <button><a href="curso_java.html">Curso Javascript </a></button>
     </div>
 </body>
 </html>
