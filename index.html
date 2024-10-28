@@ -40,6 +40,83 @@
             text-decoration: none;
             color: #000;
         }
+                footer {
+           background-color: #333;
+           color: white;
+           padding: 2rem;
+           font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+           display: flex;
+           justify-content: space-between;
+           flex-wrap: wrap;
+           max-width: 1200px;
+           margin: 0 auto;
+        }
+
+        .footer-info {
+           flex: 1;
+           margin-right: 2rem;
+        }
+
+        .footer-info p {
+           margin: 0.5rem 0;
+        }
+
+        .footer-info strong {
+           color: #f0a500;
+        }
+
+.footer-social {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-social p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-social a {
+    color: #f0a500;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+.footer-legal {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-legal p {
+    margin: 0;
+}
+
+.footer-legal a {
+    color: #f0a500;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-legal {
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -47,5 +124,23 @@
     <div id="boton">
         <button><a href="curso_java.html">Curso Javascript </a></button>
     </div>
+     <footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p>&copy; 2024 Sitio creado por <strong>FX Delta Inc.</strong> Todos los derechos reservados.</p>
+            <p>Dirección: 1234 Calle Empresarial, Ciudad de Negocios, FX 56789</p>
+            <p>Teléfono: +52 55 1234 5678 | Correo: contacto@fxdelta.com</p>
+        </div>
+        <div class="footer-social">
+            <p>Síguenos en:</p>
+            <a href="https://facebook.com/fxdelta" target="_blank">Facebook</a> |
+            <a href="https://twitter.com/fxdelta" target="_blank">Twitter</a> |
+            <a href="https://linkedin.com/company/fxdelta" target="_blank">LinkedIn</a>
+        </div>
+        <div class="footer-legal">
+            <p><a href="#">Términos y Condiciones</a> | <a href="#">Política de Privacidad</a></p>
+        </div>
+    </div>
+     </footer>
 </body>
 </html>
