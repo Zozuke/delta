@@ -7,52 +7,69 @@
     <title>Fx Delta</title>
     <style>
         body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
         }
 
         h1 {
-            color: #333;
-            font-size: 3em;
-            text-shadow: 2px 2px #aaa;
+            color: #343a40;
+            font-size: 2.8em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            text-align: center;
         }
 
-        #boton {
-            border: 2px solid red;
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
         }
 
         button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 1.2em;
-            background-color: #fff;
+            background-color: #007bff;
+            color: #fff;
             border: none;
+            border-radius: 5px;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
             cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         button:hover {
-            background-color: #f0a500;
-            color: #fff;
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.3);
         }
 
-        #titu {
+        h3 {
             color: #666;
             font-size: 1.5em;
             text-align: center;
             margin-top: 20px;
         }
 
+        img {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+        }
+
         footer {
-            background-color: #333;
+            background-color: #343a40;
             color: white;
             padding: 2rem;
             font-family: Arial, sans-serif;
+            width: 100%;
         }
 
         .footer-container {
@@ -63,26 +80,20 @@
             margin: 0 auto;
         }
 
-        .footer-info {
+        .footer-info,
+        .footer-social,
+        .footer-legal {
             flex: 1;
-            margin-right: 2rem;
+            margin: 10px;
         }
 
-        .footer-info p {
+        .footer-info p,
+        .footer-legal p {
             margin: 0.5rem 0;
         }
 
         .footer-info strong {
             color: #f0a500;
-        }
-
-        .footer-social {
-            flex: 1;
-            text-align: center;
-        }
-
-        .footer-social p {
-            margin-bottom: 0.5rem;
         }
 
         .footer-social a {
@@ -93,15 +104,6 @@
 
         .footer-social a:hover {
             text-decoration: underline;
-        }
-
-        .footer-legal {
-            flex: 1;
-            text-align: right;
-        }
-
-        .footer-legal p {
-            margin: 0;
         }
 
         .footer-legal a {
@@ -129,11 +131,16 @@
 </head>
 <body>
     <h1>Bienvenido a la página FX Delta</h1>
-    <div id="boton">
+    <div class="button-container">
         <button onclick="window.location.href='curso_java.html';">Curso Javascript</button>
+        <button onclick="window.location.href='curso_python.html';">Curso Python</button>
+        <button onclick="window.location.href='curso_css.html';">Curso CSS</button>
+        <button onclick="window.location.href='curso_html.html';">Curso HTML</button>
+        <button onclick="window.location.href='curso_java_avanzado.html';">Curso Java Avanzado</button>
+        <button>Próximamente</button>
     </div>
-    <h3 id="titu">La programación en tus manos</h3>
-    <img src="codigo.jpeg" alt="Descripción de la imagen" style="width: 300px; height: auto;">
+    <h3>La programación en tus manos</h3>
+    <img src="codigo.jpeg" alt="solo tu tienes el control">
     <footer>
         <div class="footer-container">
             <div class="footer-info">
