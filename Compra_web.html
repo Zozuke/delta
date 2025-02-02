@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Páginas Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        .hero {
+            padding: 50px 20px;
+            font-size: 26px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero button {
+            background: yellow;
+            color: black;
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .hero button:hover {
+            background: orange;
+        }
+        .services {
+            background: white;
+            color: black;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+        .services h2 {
+            color: #ff416c;
+        }
+        .service-box {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .service {
+            background: #ff4b2b;
+            color: white;
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+        .service:hover {
+            transform: scale(1.05);
+        }
+        .portfolio {
+            margin-top: 40px;
+        }
+        .portfolio img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin: 10px;
+            transition: 0.3s;
+        }
+        .portfolio img:hover {
+            transform: scale(1.1);
+        }
+        .contact {
+            margin-top: 40px;
+            padding: 20px;
+            background: white;
+            color: black;
+            border-radius: 10px;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ff4b2b;
+            border-radius: 5px;
+        }
+        .contact button {
+            background: #ff4b2b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .contact button:hover {
+            background: #ff416c;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            margin-top: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            .service { width: 100%; margin-bottom: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    🚀 Crea tu pagina web web con delta.studio
+</header>
+
+<div class="container">
+    <section class="hero">
+        <h1>¡Lleva tu negocio al siguiente nivel con un sitio web increíble!</h1>
+        <p>Diseño moderno, rápido y optimizado para atraer más clientes.</p>
+        <button onclick="window.location.href='#contacto'">Solicitar Cotización</button>
+    </section>
+
+    <section class="services">
+        <h2>📌 Nuestros Servicios</h2>
+        <div class="service-box">
+            <div class="service">🔹 Diseño Web Personalizado</div>
+            <div class="service">🛒 Tiendas en Línea (E-commerce)</div>
+            <div class="service">📱 Optimización para Móviles</div>
+            <div class="service">🚀 SEO y Posicionamiento</div>
+            <div class="service">🔧 Mantenimiento y Actualización</div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <h2>🌟 Nuestro Portafolio</h2>
+        <div>
+            <img src="https://via.placeholder.com/300" alt="Proyecto 1">
+            <img src="https://via.placeholder.com/300" alt="Proyecto 2">
+            <img src="https://via.placeholder.com/300" alt="Proyecto 3">
+        </div>
+    </section>
+
+    <section class="contact" id="contacto">
+        <h2>📞 Contáctanos</h2>
+        <p>Déjanos tus datos y te responderemos en breve.</p>
+        <form action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain">
+            <input type="text" name="nombre" placeholder="Tu Nombre" required><br>
+            <input type="tel" name="telefono" placeholder="numero de telefono:" required>
+            <input type="email" name="correo" placeholder="Tu Correo" required><br>
+            <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea><br>
+            <button id="enviar" type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    &copy; 2025 Creación de Páginas Web - Todos los derechos reservados.
+</footer>
+<script>
+    let aviso = document.getElementById("enviar");
+    
+    aviso.onclick = function(){
+        alert('tu mensaje fue enviado te enviaremos un correo electrónico: esto puede tardar unos minutos estate al pendiente de los avisos en tu email o una llamada gracias')
+    }
+</script>
+
+</body>
+</html>
