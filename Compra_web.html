@@ -165,10 +165,21 @@
     <section class="contact" id="contacto">
         <h2>📞 Contáctanos</h2>
         <p>Déjanos tus datos y te responderemos en breve.</p>
-        <form action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain">
+        <form action="https://formspree.io/f/mlddkngg" method="post">
             <input type="text" name="nombre" placeholder="Tu Nombre" required><br>
             <input type="tel" name="telefono" placeholder="numero de telefono:" required>
             <input type="email" name="correo" placeholder="Tu Correo" required><br>
+            
+                <h3>opcional</h3>
+               <select name="tipo-web">
+                <option>none</option>
+                <option>web desde cero</option>
+                <option>web prediseñada</option>
+                <option>web random</option>
+                <option>Mantenimiento de mi web</option>
+                <option>otros</option>
+            .  </select>
+        
             <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea><br>
             <button id="enviar" type="submit">Enviar Mensaje</button>
         </form>
@@ -179,10 +190,10 @@
     &copy; 2025 Creación de Páginas Web - Todos los derechos reservados.
 </footer>
 <script>
-    let aviso = document.getElementById("enviar");
+   let aviso = document.getElementById("enviar");
     
     aviso.onclick = function(){
-        alert('tu mensaje fue enviado te enviaremos un correo electrónico: esto puede tardar unos minutos estate al pendiente de los avisos en tu email o una llamada gracias')
+        alert('gracias por enviar tus respuestas verefica si pusiste bien los datos en unos momentos estaremos en contacto esto puede tardar un poco')
     }
 </script>
 
