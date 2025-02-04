@@ -17,6 +17,8 @@
             background: linear-gradient(to right, #ff416c, #ff4b2b);
             color: white;
             text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
         }
         header {
             background: rgba(0, 0, 0, 0.7);
@@ -25,24 +27,27 @@
             font-weight: bold;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
             padding: 20px;
         }
         .hero {
-            padding: 50px 20px;
-            font-size: 26px;
+            padding: 60px 20px;
+            font-size: 32px;
             animation: fadeIn 2s ease-in-out;
+        }
+        .hero h1 {
+            margin-bottom: 20px;
         }
         .hero button {
             background: yellow;
             color: black;
-            padding: 12px 20px;
-            font-size: 18px;
+            padding: 15px 25px;
+            font-size: 20px;
             border: none;
             cursor: pointer;
-            margin-top: 10px;
-            transition: 0.3s;
+            margin-top: 20px;
+            transition: background 0.3s;
         }
         .hero button:hover {
             background: orange;
@@ -52,11 +57,12 @@
             color: black;
             padding: 40px 20px;
             border-radius: 10px;
-            margin-top: 20px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            margin-top: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
         .services h2 {
             color: #ff416c;
+            margin-bottom: 20px;
         }
         .service-box {
             display: flex;
@@ -71,7 +77,8 @@
             width: 30%;
             border-radius: 10px;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
         }
         .service:hover {
             transform: scale(1.05);
@@ -79,12 +86,15 @@
         .portfolio {
             margin-top: 40px;
         }
+        .portfolio h2 {
+            margin-bottom: 20px;
+        }
         .portfolio img {
             width: 100%;
             max-width: 300px;
             border-radius: 10px;
             margin: 10px;
-            transition: 0.3s;
+            transition: transform 0.3s;
         }
         .portfolio img:hover {
             transform: scale(1.1);
@@ -96,6 +106,9 @@
             color: black;
             border-radius: 10px;
         }
+        .contact h2 {
+            margin-bottom: 20px;
+        }
         .contact input, .contact textarea {
             width: 100%;
             padding: 10px;
@@ -103,41 +116,40 @@
             border: 2px solid #ff4b2b;
             border-radius: 5px;
         }
-        #caja {
-            border-color:black solid 4px
-            background-color:red;
-            border-radius:10px
-        }
         .contact button {
             background: #ff4b2b;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 25px;
             border: none;
-            font-size: 18px;
+            font-size: 20px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: background 0.3s;
+            margin-top: 20px;
         }
         .contact button:hover {
             background: #ff416c;
         }
         footer {
             background: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            margin-top: 20px;
+            padding: 15px;
+            margin-top: 40px;
+            color: white;
+            font-size: 16px;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
         @media (max-width: 768px) {
-            .service { width: 100%; margin-bottom: 10px; }
+            .service { width: 100%; }
+            .service-box { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    🚀 Crea tu pagina web web con delta.studio
+    🚀 Crea tu página web con delta.studio
 </header>
 
 <div class="container">
@@ -170,21 +182,19 @@
     <section class="contact" id="contacto">
         <h2>📞 Contáctanos</h2>
         <p>Déjanos tus datos y te responderemos en breve.</p>
-        <form action="https://formspree.io/f/mlddkngg" method="post">
+        <form action="" method="post">
             <input type="text" name="nombre" placeholder="Tu Nombre" required><br>
-            <input type="tel" name="telefono" placeholder="numero de telefono:" required>
+            <input type="tel" name="telefono" placeholder="Número de Teléfono" required><br>
             <input type="email" name="correo" placeholder="Tu Correo" required><br>
-            
-                <h3>opcional</h3>
-               <select name="tipo-web">
+            <h3>opcional</h3>
+            <select name="tipo-web">
                 <option>none</option>
                 <option>web desde cero</option>
                 <option>web prediseñada</option>
                 <option>web random</option>
                 <option>Mantenimiento de mi web</option>
                 <option>otros</option>
-            .  </select>
-        
+            </select>
             <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea><br>
             <button id="enviar" type="submit">Enviar Mensaje</button>
         </form>
@@ -194,11 +204,12 @@
 <footer>
     &copy; 2025 Creación de Páginas Web - Todos los derechos reservados.
 </footer>
+
 <script>
-   let aviso = document.getElementById("enviar");
+    let aviso = document.getElementById("enviar");
     
     aviso.onclick = function(){
-        alert('gracias por enviar tus respuestas verefica si pusiste bien los datos en unos momentos estaremos en contacto esto puede tardar un poco')
+        alert('Gracias por enviar tus respuestas. Verifica si pusiste bien los datos. En unos momentos estaremos en contacto. Esto puede tardar un poco.');
     }
 </script>
 
