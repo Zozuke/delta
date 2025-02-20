@@ -242,5 +242,18 @@
     </div>
 </footer>
     <script src="//code.tidio.co/bcgknjzsnguxpdbua8dyeu3rpzwzdmag.js" async></script>
+  <script>
+    let boton = document.getElementById("boton")
+            
+            boton.onclick = function(){
+                let contra = prompt("escribe la contraseña");
+                if (contra === "delta.99"){
+                    alert("contraseña correcta vienvenido ");
+                    window.location.href = "#"
+                }else{
+                    alert("lo siento no puedes pasar");
+                };
+            };
+  </script>
 </body>
 </html>
