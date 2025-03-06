@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo iniciar sesión en GitHub</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #2980b9;
+        }
+
+        p {
+            color: #333;
+        }
+
+        /* Estilos para el índice */
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            padding-top: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #34495e;
+            padding-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .sidebar ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #34495e;
+        }
+
+        /* Estilos para el contenido principal */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        /* Estilos para el vídeo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Estilos para el tema oscuro */
+        body.dark-mode {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        body.dark-mode .sidebar {
+            background-color: #34495e;
+        }
+
+        body.dark-mode .main-content h1, body.dark-mode .main-content h2 {
+            color: #ecf0f1;
+        }
+
+        body.dark-mode .main-content p {
+            color: #bdc3c7;
+        }
+
+        body.dark-mode .video-container {
+            background-color: #34495e;
+        }
+
+        /* Botón para cambiar el tema */
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .theme-toggle:hover {
+            background-color: #34495e;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="theme-toggle" id="themeToggle">Modo Oscuro</button>
+
+    <div class="sidebar">
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="documento.html">Introducción</a></li>
+            <li><a href="instalar1.html">¿Cómo iniciar sesión en GitHub?</a></li>
+            <li><a href="instalar2.html">¿Cómo subir archivos en GitHub?</a></li>
+            <li><a href="pages.html">sacar mi dominio para mi pagina web</a></li>
+            <li><a href="cambiar.html">Cambiar archivos</a></li>
+            <li><a href="eliminar.html">Eliminar archivos</a></li>
+            <li><a href="ayuda_delta.html">Instalar con Delta Studio</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>¿Cómo subir mis archivos a GitHub?</h1>
+        <h6>nota inportante: poner en sitio de escritorio o sitio para computadora si estas usando tu celular</h6>
+        
+        <p>para crear tu sitio web nesecitamos subir nuestro codigo html que se nos entrego </p>
+
+        <h2>¿como obtener mi html?</h2>
+        <p>si tu pediste una web a <strong><a href="index.html">delta studio</a></strong> eyos te daran una carpeta que trae tu html y todo lo necesario
+ y también te diran por donde te los van a enviar después descargas el archivo con tu nombre o mi web.</p>
+        
+        <h2>como publicar mis archivos</h2>
+        <p>publicar tus archivos es nuy facil si no sabes como puedes ver el video que esta a continuacion</p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rBPBBs" frameborder="0" allowfullscreen></iframe>
+
+        <h2>Consejos adicionales</h2>
+        <ul>
+            <li>puedes guardar cada modficación que agas cuantas veses quieras o  salirte sin guardar si es que te equivocaste en algo</li>
+        </ul><br><br>
+         <h3>propiedad de delta studio </h3>
+         <p>pagina valida por @delta studio</p>
+    <script>
+        // Función para cambiar el tema
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>

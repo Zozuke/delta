@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de Proyecto Avanzada</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilos para la barra lateral */
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            padding-top: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #34495e;
+            padding-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .sidebar ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #34495e;
+        }
+
+        /* Estilos para el contenido principal */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .main-content h1 {
+            color: #2c3e50;
+        }
+
+        .main-content h2 {
+            color: #2980b9;
+        }
+
+        .main-content p {
+            color: #333;
+        }
+
+        /* Estilos para el tema oscuro */
+        body.dark-mode {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        body.dark-mode .sidebar {
+            background-color: #34495e;
+        }
+
+        body.dark-mode .main-content h1, body.dark-mode .main-content h2 {
+            color: #ecf0f1;
+        }
+
+        body.dark-mode .main-content p {
+            color: #bdc3c7;
+        }
+
+        /* Botón para cambiar el tema */
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .theme-toggle:hover {
+            background-color: #34495e;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="theme-toggle" id="themeToggle">Modo Oscuro</button>
+
+    <div class="sidebar">
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="documento.html">Introducción</a></li>
+            <li><a href="instalar1.html">¿como iniciar sesion en Github? </a></li>
+            <li><a href="instalar2.html">¿como subir archivos en github</a></li>
+            <li><a href="pages.html">sacar mi dominio para mi pagina web</a></li>
+            <li><a href="cambiar.html">cambiar archivos</a></li>
+            <li><a href="eliminar.html">eliminar archivos</a></a></li>
+            <li><a href="ayuda_delta.html">instalar con delta studio</a></li>
+            
+        </ul>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <h1 id="introduccion">Introducción</h1>
+        <h6>nota inportante: poner en sitio de escritorio o sitio para computadora  si estas usando tu celular </h6><br>
+        <p>Bienvenido a la documentación de nuestro proyecto avanzado. Aquí encontrarás toda la información necesaria para entender, instalar y utilizar tu html o instalar tu página web gratuita usando Github pronto subieromos otros tipos de opciones para instalar tu pagina web con otro tipos de dominios.<br><br>en en esta seccion te daremos todos los detalles para que puedas istalar tu pagina web sin problemas usando github ya que esto es gratis usando el subdominio <strong>github pages</strong> para que puedas ver sin ningun costo pero puedes ponerlo a un dominio propio.</p>
+
+        <h2 id="instalacion">¿como instalar mi pagina web?</h2>
+        <p>Para instalar tu pagina web debes prepararte con algunas cosas que puedes obterlos desde tu selular o computadora aqui te daremos lo necesario para que puedas intalar tu web algunas cosas te lo daremos a traves de links que veras de azul con una raya abajo <a href="#"> esto es un ejemplo</a> dentro se estas cosas te redigira alas cosas que buscas, ahora que sabes esto aqui hay algunas cosas que tienes que tener en cuenta:</p>
+        <ol>
+            <li>Descargar el archivo de instalación desde nuestro <a href="Compra_web.html">sitio web</a> si ya lo tienes sigue el siguiente paso.</li><br><br>
+            <li>iniciar seción en github mira el <a href="sesion.html">video</a>para aprender como aserlo</li><br><br>
+            <li>intalar <a href="https://play.google.com/store/apps/details?id=com.ace.ex.file.manager">Ex explorador de archivos</a>para que puedas abrir tus codigos o aser una modificación desde tu celular o usar un exploExplorador de archivos en tu pc</li><br><br>
+            <li>Mira el menú que esta al lado izquierdo ahi encontraras todo lo que nesesitas o saltarte algunas opciones</li>
+        </ol>
+
+        <h2 id="uso">Uso</h2>
+        <p>Una vez echo unos sensillos pasos podras ver tu pagina 100% funcional</p>
+        
+        <h2 id="api">dudas</h2>
+        <p>tratamos de explicar de la mejor manera mas entendible para todos ustedes en esta documentacion pero si necesitas ayuda personal puedes contactarnos por <a href="mailto:deltafx.studio.pro@gmail.com"> correo electrónico</a> o ir a <a href="index.hrml">incio web</a> para contactar con support de diferentes formas no olvides leer nuestros <a href="Terminos_y_condisiones.html">terminos y condiciones</a></p>
+        <br>
+
+        <h2 id="licencia">Licencia</h2>
+        <p>Este proyecto está licenciado bajo la Licencia MIT y.<strong>delta studio: </strong> Para más detalles, consulta el archivo LICENSE en el repositorio.</p>
+    </div>
+
+    <script>
+        // Función para cambiar el tema
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+
+</body>
+</html>
