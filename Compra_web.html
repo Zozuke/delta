@@ -2,216 +2,321 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creación de Páginas Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Creación de Páginas Web — Fx.Delta</title>
+    <meta name="description" content="Creamos páginas web modernas, tiendas en línea y soluciones digitales profesionales. Cotiza tu proyecto hoy.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            background: linear-gradient(to right, #ff416c, #ff4b2b);
-            color: white;
-            text-align: center;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        header {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        .hero {
-            padding: 60px 20px;
-            font-size: 32px;
-            animation: fadeIn 2s ease-in-out;
-        }
-        .hero h1 {
-            margin-bottom: 20px;
-        }
-        .hero button {
-            background: yellow;
-            color: black;
-            padding: 15px 25px;
-            font-size: 20px;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background 0.3s;
-        }
-        .hero button:hover {
-            background: orange;
-        }
-        .services {
-            background: white;
-            color: black;
-            padding: 40px 20px;
-            border-radius: 10px;
-            margin-top: 40px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        }
-        .services h2 {
-            color: #ff416c;
-            margin-bottom: 20px;
-        }
-        .service-box {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .service {
-            background: #ff4b2b;
-            color: white;
-            padding: 20px;
-            width: 30%;
-            border-radius: 10px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-            margin-bottom: 20px;
-        }
-        .service:hover {
-            transform: scale(1.05);
-        }
-        .portfolio {
-            margin-top: 40px;
-        }
-        .portfolio h2 {
-            margin-bottom: 20px;
-        }
-        .portfolio img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 10px;
-            margin: 10px;
-            transition: transform 0.3s;
-        }
-        .portfolio img:hover {
-            transform: scale(1.1);
-        }
-        .contact {
-            margin-top: 40px;
-            padding: 20px;
-            background: white;
-            color: black;
-            border-radius: 10px;
-        }
-        .contact h2 {
-            margin-bottom: 20px;
-        }
-        .contact input, .contact textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 2px solid #ff4b2b;
-            border-radius: 5px;
-        }
-        .contact button {
-            background: #ff4b2b;
-            color: white;
-            padding: 15px 25px;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-            transition: background 0.3s;
-            margin-top: 20px;
-        }
-        .contact button:hover {
-            background: #ff416c;
-        }
-        footer {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 15px;
-            margin-top: 40px;
-            color: white;
-            font-size: 16px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @media (max-width: 768px) {
-            .service { width: 100%; }
-            .service-box { flex-direction: column; align-items: center; }
-        }
-    </style>
+        <style>
+            /* Nueva paleta: azul profundo -> púrpura -> magenta (llamativo, inspirador) */
+            :root{
+                --bg-1:#0f1724; /* near black */
+                --bg-2:#0b1220; /* deep blue */
+                --glow-1:#6ee7b7; /* aqua */
+                --accentA:#6c5ce7; /* purple */
+                --accentB:#ff6bcb; /* magenta */
+                --card:#0f1b2d; 
+                --muted:#94a3b8;
+            }
+            *{box-sizing:border-box;margin:0;padding:0}
+            html,body{height:100%}
+            body{font-family:'Poppins',sans-serif;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:#e6eef8;line-height:1.5;-webkit-font-smoothing:antialiased}
+            .wrap{max-width:1200px;margin:0 auto;padding:28px}
+            header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+            .brand{display:flex;gap:14px;align-items:center}
+            .logo{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--accentA),var(--accentB));color:white;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;box-shadow:0 8px 30px rgba(108,92,231,0.18)}
+            h1{font-size:1.5rem;margin-bottom:4px}
+            .small{color:var(--muted);font-size:0.9rem}
+
+            /* HERO */
+            .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;padding:36px 0}
+            .hero .eyebrow{display:inline-block;background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:999px;color:var(--glow-1);font-weight:700;margin-bottom:12px}
+            .hero h2{font-size:2rem;line-height:1.05;margin-bottom:12px;color:rgba(255,255,255,0.98);text-shadow:0 6px 20px rgba(12,8,30,0.6)}
+            .hero p{color:rgba(226,235,248,0.92);margin-bottom:16px;text-shadow:0 4px 18px rgba(8,12,24,0.45)}
+            .ctaGroup{display:flex;gap:12px;flex-wrap:wrap}
+            .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:0;cursor:pointer;font-weight:700;text-decoration:none}
+            .btn-primary{background:linear-gradient(90deg,var(--accentA),var(--accentB));color:white;box-shadow:0 10px 30px rgba(108,92,231,0.18);transform:translateY(0);transition:transform .18s ease, box-shadow .18s}
+            .btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(108,92,231,0.22)}
+            .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--muted)}
+
+            .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(6px)}
+            .offer{font-size:1.05rem;margin-bottom:10px}
+
+            /* SERVICES */
+            .services{margin-top:22px}
+            .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px}
+            .service-item{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:12px;border-left:6px solid rgba(108,92,231,0.95);color:rgba(230,238,248,0.98)}
+            .service-item h4{margin-bottom:8px;color:#fff}
+
+            /* PORTFOLIO */
+            .portfolio{margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+            .portfolio img{width:100%;max-width:340px;border-radius:12px;box-shadow:0 20px 40px rgba(2,6,23,0.7);transition:transform .28s ease;filter:contrast(1.02) saturate(1.05)}
+            .portfolio img:hover{transform:translateY(-6px) scale(1.02)}
+
+            /* CONTACT (CTA) */
+            .contact{margin-top:26px;padding:18px;border-radius:12px;color:#071229}
+            .contact .btn{border-radius:10px}
+            .contact p{color:rgba(7,18,41,0.92);font-weight:600}
+
+            /* Mejora de legibilidad general */
+            body,h1,h2,h3,h4,h5,p,li{font-weight:500}
+            a{color:var(--accentB);font-weight:700}
+
+            footer{margin-top:36px;color:rgba(255,255,255,0.7);padding:12px 0;text-align:center}
+
+            /* Responsive */
+            @media(max-width:980px){.hero{grid-template-columns:1fr;}.service-grid{grid-template-columns:1fr 1fr}.portfolio img{max-width:46vw}}
+            @media(max-width:520px){.service-grid{grid-template-columns:1fr}.wrap{padding:14px}.portfolio img{max-width:80vw}}
+        </style>
 </head>
 <body>
 
-<header>
-    🚀 Crea tu página web con delta.studio
-</header>
-
-<div class="container">
-    <section class="hero">
-        <h1>¡Lleva tu negocio al siguiente nivel con un sitio web increíble!</h1>
-        <p>Diseño moderno, rápido y optimizado para atraer más clientes.</p>
-        <button onclick="window.location.href='#contacto'">Solicitar Cotización</button>
-    </section>
-
-    <section class="services">
-        <h2>📌 Nuestros Servicios</h2>
-        <div class="service-box">
-            <div class="service">🔹 Diseño Web Personalizado</div>
-            <div class="service">🛒 Tiendas en Línea (E-commerce)</div>
-            <div class="service">📱 Optimización para Móviles</div>
-            <div class="service">🚀 SEO y Posicionamiento</div>
-            <div class="service">🔧 Mantenimiento y Actualización</div>
+    <header class="wrap">
+        <div class="brand">
+            <div class="logo">Δ</div>
+            <div>
+                <h1>Fx.Delta — Creación de Páginas Web</h1>
+                <div class="small">Diseño, tiendas y SEO</div>
+            </div>
         </div>
-    </section>
+    </header>
 
-    <section class="portfolio">
-        <h2>🌟 Nuestro Portafolio</h2>
-        <div id="caja">
-            <img src="negocio.jpg" alt="Proyecto 1">
-            <img src="pintura.jpg" alt="Proyecto 2">
-            <img src="constru.jpg" alt="Proyecto 3">
+    <div class="wrap">
+        <section class="hero">
+            <div class="content">
+                <h2>¡Lleva tu negocio al siguiente nivel con un sitio web increíble!</h2>
+                <p>Diseño moderno, rápido y optimizado para atraer más clientes. Creamos tiendas, sitios corporativos y soluciones a medida.</p>
+                <div class="cta"><a class="btn" href="#contacto">Solicitar Cotización</a></div>
+            </div>
+            <div class="card">
+                <strong>¿Listo para empezar?</strong>
+                <p class="muted">Cotiza tu proyecto y recibe una guía en 24-48 horas.</p>
+            </div>
+        </section>
+
+        <!-- Logos / Trust -->
+        <section class="trust">
+            <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+                <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+                    <span class="badge">Mejor valorado</span>
+                    <span class="mini">+500 clientes</span>
+                    <span class="mini">Entrega 24-48h</span>
+                </div>
+                <div class="logos" aria-hidden>
+                    <div class="logo-sprite">A</div>
+                    <div class="logo-sprite">B</div>
+                    <div class="logo-sprite">C</div>
+                    <div class="logo-sprite">D</div>
+                    <div class="logo-sprite">E</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services card">
+            <h3>📌 Nuestros Servicios</h3>
+            <div class="service-grid">
+                <div class="service-item">🔹 Diseño Web Personalizado</div>
+                <div class="service-item">🛒 Tiendas en Línea (E-commerce)</div>
+                <div class="service-item">📱 Optimización para Móviles</div>
+                <div class="service-item">🚀 SEO y Posicionamiento</div>
+                <div class="service-item">🔧 Mantenimiento y Actualización</div>
+                <div class="service-item">🎓 Cursos y Formación</div>
+            </div>
+        </section>
+
+        <!-- Features / oferta rápida -->
+        <section class="features">
+            <h3>¿Qué incluye tu compra?</h3>
+            <div class="feature-grid">
+                <div class="feature card">
+                    <div class="icon">💡</div>
+                    <h4>Diseño único</h4>
+                    <p>Prototipo y diseño pensado para convertir visitantes en clientes.</p>
+                </div>
+                <div class="feature card">
+                    <div class="icon">⚡</div>
+                    <h4>Performance</h4>
+                    <p>Optimización para carga rápida y SEO técnico inicial.</p>
+                </div>
+                <div class="feature card">
+                    <div class="icon">🔒</div>
+                    <h4>Seguridad</h4>
+                    <p>Certificados básicos y buenas prácticas para proteger tu sitio.</p>
+                </div>
+                <div class="feature card">
+                    <div class="icon">🎯</div>
+                    <h4>Enfoque en ventas</h4>
+                    <p>CTAs, copy y estructura centrada en convertir clientes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio">
+            <h3>🌟 Nuestro Portafolio</h3>
+            <div>
+                <div class="portfolio">
+                    <img src="negocio.jpg" loading="lazy" alt="Proyecto 1">
+                    <img src="pintura.jpg" loading="lazy" alt="Proyecto 2">
+                    <img src="constru.jpg" loading="lazy" alt="Proyecto 3">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonios -->
+        <section class="testimonials card">
+            <h3>Lo que dicen nuestros clientes</h3>
+            <div class="test-wrap">
+                <div class="test-slide active">
+                    <p>"Me entregaron una web que vendió desde la primera semana. Atención 10/10."</p>
+                    <div class="meta">— Ana P., Boutique</div>
+                </div>
+                <div class="test-slide">
+                    <p>"Rápido, profesional y atento. Recomendados para quien necesita resultados."</p>
+                    <div class="meta">— Luis R., Construcción</div>
+                </div>
+                <div class="test-slide">
+                    <p>"Mi tienda aumentó las ventas. Diseño claro y soporte excelente."</p>
+                    <div class="meta">— Carla M., Tienda Online</div>
+                </div>
+            </div>
+            <div class="dots" aria-hidden>
+                <button class="dot active" data-index="0"></button>
+                <button class="dot" data-index="1"></button>
+                <button class="dot" data-index="2"></button>
+            </div>
+        </section>
+
+    <!-- FAQ -->
+    <section class="faq card">
+            <h3>Preguntas frecuentes</h3>
+            <div class="qa">
+                <button class="q">¿Cuánto cuesta una web básica? <span class="chev">▸</span></button>
+                <div class="a">Desde $3,500 MXN — depende de funcionalidades y diseño personalizado.</div>
+            </div>
+            <div class="qa">
+                <button class="q">¿Entregan hosting y dominio? <span class="chev">▸</span></button>
+                <div class="a">No incluido por defecto; puedo orientarte para contratar y configurar el hosting.</div>
+            </div>
+            <div class="qa">
+                <button class="q">¿Puedo pagar por WhatsApp? <span class="chev">▸</span></button>
+                <div class="a">Sí. Coordinamos por WhatsApp y te envío opciones de pago (transferencia, Oxxo, tarjeta).</div>
+            </div>
+        </section>
+        <div>
+            <!--enserarrlo de otro color-->
+            <section class="contact" id="contacto" style="background:linear-gradient(180deg,rgba(34, 6, 246, 0.08),rgba(255,107,203,0.05));border:1px solid rgba(255,255,255,0.06);">
+                <h3 style="color:#fff">📞 Compra tu página web ahora</h3>
+                <p style="color:#6143c4">Si estás listo para comprar tu página web ahora mismo, envíanos un mensaje por WhatsApp y coordinamos los detalles al instante.</p>
+
+                <!-- CTA principal: WhatsApp -->
+                <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+                    <a id="waBtn" class="btn" href="https://api.whatsapp.com/send?phone=522219861564&text=Hola%20Delta%20FX%2C%20quiero%20comprar%20una%20p%C3%A1gina%20web%20%F0%9F%9A%80" target="_blank" rel="noopener noreferrer">Chatear por WhatsApp</a>
+
+                    <!-- Botón secundario: mailto fallback -->
+                    <a id="mailBtn" class="btn" href="mailto:deltafx.studio.pro@gmail.com?subject=Solicitud%20de%20Compra%20-%20Página%20Web&body=Hola%20Delta%2C%0A%0AMe%20interesa%20comprar%20una%20p%C3%A1gina%20web.%20Mis%20datos%20son%3A%0A%0ANombre%3A%0ATel%C3%A9fono%3A%0AEmail%3A%0ANegocio%20%28opcional%29%3A%0AComentarios%3A%0A%0AGracias.%0A" target="_self" rel="noopener">Enviar por correo (backup)</a>
+                </div>
         </div>
-    </section>
+                <p style="margin-top:12px;color:rgba(251, 249, 249, 0.6);font-size:0.95rem">Si más adelante habilitas un servidor para procesar formularios, puedes reemplazar estos botones por un formulario que envíe al correo <code>deltafx.studio.pro@gmail.com</code> usando un endpoint seguro (POST). Si quieres, te preparo el código del backend (Node/Express o serverless) para recibir y reenviar correos.</p>
+            </section>
+    </div>
 
-    <section class="contact" id="contacto">
-        <h2>📞 Contáctanos</h2>
-        <p>Déjanos tus datos y te responderemos en breve.</p>
-        <form action="" method="post">
-            <input type="text" name="nombre" placeholder="Tu Nombre" required><br>
-            <input type="tel" name="telefono" placeholder="Número de Teléfono" required><br>
-            <input type="email" name="correo" placeholder="Tu Correo" required><br>
-            <h3>opcional</h3>
-            <select name="tipo-web">
-                <option>none</option>
-                <option>web desde cero</option>
-                <option>web prediseñada</option>
-                <option>web random</option>
-                <option>Mantenimiento de mi web</option>
-                <option>otros</option>
-            </select>
-            <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea><br>
-            <button id="enviar" type="submit">Enviar Mensaje</button>
-        </form>
-    </section>
-</div>
+    <footer>
+        &copy; 2025 Fx.Delta — Creación de Páginas Web. Todos los derechos reservados.
+    </footer>
 
-<footer>
-    &copy; 2025 Creación de Páginas Web - Todos los derechos reservados.
-</footer>
+    <script>
+        // Interceptar enlaces temporales (placeholder) y mostrar alerta
+        (function(){
+            const anchors = document.querySelectorAll('a[href]');
+            anchors.forEach(a => {
+                const href = a.getAttribute('href').trim();
+                // No bloquear anclas internas (hash) ni enlaces mailto/tel/http
+                const isHash = href.startsWith('#');
+                const isExternalOrContact = href.toLowerCase().startsWith('javascript:') || href.toLowerCase().startsWith('mailto:') || href.toLowerCase().startsWith('tel:') || href.toLowerCase().startsWith('http://') || href.toLowerCase().startsWith('https://');
+                const isPlaceholder = !isHash && !isExternalOrContact && (href === '' || href === '#');
+                if(isPlaceholder && !a.hasAttribute('data-preserve')){
+                    a.addEventListener('click', function(ev){ ev.preventDefault(); alert('Estamos trabajando en esta sección'); });
+                }
+            });
+        })();
 
-<script>
-    let aviso = document.getElementById("enviar");
-    
-    aviso.onclick = function(){
-        alert('Gracias por enviar tus respuestas. Verifica si pusiste bien los datos. En unos momentos estaremos en contacto. Esto puede tardar un poco.');
-    }
-</script>
+        // Testimonial carousel
+        (function(){
+            const slides = document.querySelectorAll('.test-slide');
+            const dots = document.querySelectorAll('.dot');
+            let idx = 0;
+            function show(i){
+                slides.forEach(s=>s.classList.remove('active'));
+                dots.forEach(d=>d.classList.remove('active'));
+                slides[i].classList.add('active');
+                dots[i].classList.add('active');
+            }
+            dots.forEach(d=>d.addEventListener('click', ()=>{ idx = Number(d.dataset.index); show(idx); }));
+            setInterval(()=>{ idx = (idx+1)%slides.length; show(idx); }, 4500);
+        })();
+
+        // FAQ toggle
+        (function(){
+            document.querySelectorAll('.faq .q').forEach(btn=>{
+                btn.addEventListener('click', ()=>{
+                    btn.classList.toggle('open');
+                    const next = btn.nextElementSibling;
+                    if(next.style.maxHeight){ next.style.maxHeight = null; } else { next.style.maxHeight = next.scrollHeight + 'px'; }
+                });
+            });
+        })();
+
+        // Floating WhatsApp button
+        (function(){
+            const wa = document.createElement('a');
+            wa.href = 'https://api.whatsapp.com/send?phone=522219861564&text=Hola%20Delta%20FX%2C%20quiero%20comprar%20una%20p%C3%A1gina%20web';
+            wa.target = '_blank'; wa.rel = 'noopener noreferrer';
+            wa.className = 'wa-float'; wa.innerHTML = '💬';
+            document.body.appendChild(wa);
+        })();
+    </script>
+
+    <style>
+        /* Logos & trust */
+        .logos{display:flex;gap:8px;align-items:center}
+        .logo-sprite{width:48px;height:28px;background:rgba(255,255,255,0.03);border-radius:6px;display:inline-flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.85);font-weight:700}
+        .badge{background:linear-gradient(90deg,var(--accentA),var(--accentB));color:white;padding:6px 10px;border-radius:999px;font-weight:700;margin-right:6px}
+        .mini{color:var(--muted);font-weight:700;margin-right:6px}
+
+        /* Features */
+        .feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+        .feature .icon{font-size:26px;margin-bottom:8px}
+        .feature h4{margin-bottom:6px}
+
+        /* Testimonials */
+        .testimonials .test-wrap{position:relative;min-height:120px}
+        .test-slide{display:none;padding:14px}
+        .test-slide.active{display:block}
+        .testimonials .meta{margin-top:8px;color:var(--muted);font-size:0.9rem}
+        .dots{display:flex;gap:8px;margin-top:12px}
+        .dot{width:10px;height:10px;background:rgba(255,255,255,0.12);border-radius:50%;border:0;cursor:pointer}
+        .dot.active{background:linear-gradient(90deg,var(--accentA),var(--accentB))}
+
+        /* FAQ */
+        /* FAQ card visual (mejor contraste y coherencia con paleta) */
+        .faq.card{
+            background: linear-gradient(180deg, rgba(12,16,36,0.6), rgba(24,20,44,0.45));
+            border: 1px solid rgba(255,255,255,0.04);
+            padding: 18px;
+            border-radius: 14px;
+            backdrop-filter: blur(6px);
+            color: #e6eef8;
+        }
+        .faq .qa{margin-top:10px}
+        .faq .q{width:100%;text-align:left;padding:12px;border-radius:8px;background:rgba(255,255,255,0.035);border:0;cursor:pointer;font-weight:800;color:#fff}
+        .faq .a{max-height:0;overflow:hidden;padding:0 12px;color:var(--muted);transition:max-height .28s ease}
+
+        /* Floating WhatsApp */
+        .wa-float{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,var(--accentA),var(--accentB));color:white;font-size:22px;text-decoration:none;box-shadow:0 12px 30px rgba(108,92,231,0.25)}
+
+        @media(max-width:980px){.feature-grid{grid-template-columns:1fr 1fr}.logos{justify-content:center}}
+        @media(max-width:520px){.feature-grid{grid-template-columns:1fr}.logos{gap:6px}}
+    </style>
 
 </body>
 </html>
